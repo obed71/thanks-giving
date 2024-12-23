@@ -4,8 +4,10 @@ import photo from '/WhatsApp Image 2024-12-23 at 09.20.06.jpeg';
 import photo1 from '/th-534600341.jpg';
 import photo2 from '/th-3280659880.jpg';
 import music from '/applause-180037.mp3';
+import musicChristmass from '/WhatsApp Audio 2024-12-23 at 16.17.41.mp4';
 
 const applause = new Audio(music);
+const christmass = new Audio(musicChristmass);
 
 const app = document.getElementById('app');
 document.body.style.backgroundImage = `url(${photo})`;
@@ -50,6 +52,7 @@ app.append(heading, paragraph, elx);
 function playMusic() {
   if (applause.paused) {
     applause.play();
+    christmass.play();
   }
 }
 
