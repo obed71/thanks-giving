@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-size: cover;
+  animation: bg 20s linear infinite forwards;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+#x {
+  background-color: rgba(0, 0, 0, 0.23);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.1;
+  color: transparent;
+  background-clip: text;
+  animation: color 2s ease-in-out infinite;
+}
+
+p {
+  font-size: 1.3em;
+  line-height: 1.5;
+  background-color: rgb(70, 66, 64);
+  color: #eed8fc;
+}
+
+h1,
+p {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  box-shadow: inset 0 0 16px black;
+  text-align: center;
+  backdrop-filter: blur(16px);
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.wrong {
+  color: #fec4c4;
+}
+
+.right {
+  color: #a7ffa7;
+}
+
+#showSurprise {
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  background-color: #5656df;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-wrap: balance;
+  cursor: pointer;
+  transition: filter 1s linear;
+}
+
+#showSurprise:hover {
+  filter: hue-rotate(90deg);
+}
+
+.surprise {
+  width: 40%;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  position: absolute;
+  bottom: 0;
+  filter: brightness(0.75);
+}
+
+.surprise:nth-child(even) {
+  right: 0;
+}
+
+@media (prefers-color-scheme: light) {
+}
+
+@keyframes bg {
+  50% {
+    background-position: 100%;
+  }
+}
+
+@keyframes color {
+  0% {
+    background-image: linear-gradient(to right bottom, red, blue);
+  }
+
+  100% {
+    background-image: linear-gradient(to right bottom, blue, red);
+  }
+}
