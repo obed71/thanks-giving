@@ -6,7 +6,6 @@ import photo2 from '/th-3280659880.jpg';
 import music from '/applause-180037.mp3';
 
 const applause = new Audio(music);
-applause.loop = true;
 
 const app = document.getElementById('app');
 document.body.style.backgroundImage = `url(${photo})`;
@@ -36,13 +35,13 @@ typewriter
   .deleteChars(ndabemera.length)
   .pauseFor(300)
   .typeString(`<span class="right">${ndabakunda}</span>`)
-  .callFunction(allowAutoPlay)
   .pauseFor(200)
   .deleteAll()
   .callFunction(() => paragraph.querySelector('.Typewriter__cursor').remove())
   .typeString(
     `<button id="showSurprise">Ready for a Surprise? Click Me!</button>`
   )
+  .callFunction(allowAutoPlay)
   .callFunction(showSurprise)
   .start();
 
@@ -55,7 +54,7 @@ function playMusic() {
 }
 
 function allowAutoPlay() {
-  document.addEventListener('click', playMusic);
+  paragraph.querySelector('#showSurprise').addEventListener('click', playMusic);
 }
 
 function showSurprise() {
