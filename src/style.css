@@ -11,6 +11,7 @@ body {
   height: 100vh;
   background-size: cover;
   animation: bg 20s linear infinite forwards;
+  background-repeat: no-repeat;
 }
 
 #app {
@@ -93,17 +94,27 @@ p {
   position: absolute;
   bottom: 0;
   filter: brightness(0.75);
+  bottom: 16px;
 }
 
-.surprise:nth-child(odd) {
+.surprise.first {
   left: 0;
 }
 
-.surprise:nth-child(even) {
+.surprise.second {
   right: 0;
 }
 
-@media (prefers-color-scheme: light) {
+.surprise.third {
+  left: calc(50% - min(45%, 250px) / 2);
+  animation: christmass 4s linear infinite forwards;
+  bottom: 10%;
+}
+
+@keyframes christmass {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes bg {

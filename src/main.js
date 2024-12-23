@@ -3,6 +3,7 @@ import Typewriter from 'typewriter-effect/dist/core';
 import photo from '/WhatsApp Image 2024-12-23 at 09.20.06.jpeg';
 import photo1 from '/th-534600341.jpg';
 import photo2 from '/th-3280659880.jpg';
+import photo3 from '/IMG-20241223-WA0004.jpg';
 import music from '/applause-180037.mp3';
 import musicChristmass from '/WhatsApp Audio 2024-12-23 at 16.17.41.mp4';
 
@@ -68,12 +69,16 @@ function showSurprise() {
 
     const photo1El = document.createElement('img');
     photo1El.src = photo1;
-    photo1El.classList.add('surprise');
+    photo1El.classList.add('surprise', 'first');
 
     const photo2El = document.createElement('img');
     photo2El.src = photo2;
-    photo2El.classList.add('surprise');
+    photo2El.classList.add('surprise', 'second');
 
-    app.append(photo1El, photo2El);
+    const photo3El = document.createElement('img');
+    photo3El.src = photo3;
+    photo3El.classList.add('surprise', 'third');
+
+    app.append(photo1El, photo2El, photo3El);
   });
 }
