@@ -107,7 +107,6 @@ p {
 
 .surprise.third {
   left: calc(50% - min(45%, 250px) / 2);
-  animation: christmass 4s linear infinite forwards;
   bottom: 10%;
 }
 
